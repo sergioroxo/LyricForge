@@ -11,7 +11,7 @@ interface AlignedLyricWord {
   word: string;
 }
 
-interface SongMetadata {
+export interface SongMetadata {
   title?: string;
   artist?: string;
   album?: string;

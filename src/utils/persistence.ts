@@ -5,6 +5,12 @@ type Persistence = {
   clear(): Promise<void>;
 };
 
+declare global {
+  interface Window {
+    persistentStorage: Persistence;
+  }
+}
+
 export const persistence: Persistence = {
   setItem(key, value) {
     return window.persistentStorage.setItem(key, value);
